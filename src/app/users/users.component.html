@@ -1,0 +1,47 @@
+<form [formGroup]="form">
+<div [ngClass]="{'has-error':form.get('userNameControl').invalid && form.get('userNameControl').touched}"> <p></p>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)] = "userName"
+  placeholder="link name"
+  formControlName="userNameControl"
+>
+  <p *ngIf="form.get('userNameControl').invalid && form.get('userNameControl').touched" >
+    <span *ngIf="form.get('userNameControl').errors['required']" >Empty name line</span>
+    <span *ngIf="form.get('userNameControl').errors['lengthError']" >2ic avel tarer</span>
+  </p>
+</div>
+
+
+  <div [ngClass]="{'has-error': form.get('userLinkName').invalid && form.get('userLinkName').touched}">
+    <p></p>
+
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)] = "userLink"
+  placeholder="link address"
+  formControlName="userLinkName"
+>
+    <p *ngIf="form.get('userLinkName').invalid && form.get('userLinkName').touched" >
+      <span *ngIf="form.get('userLinkName').errors['required']" >Empty name line</span>
+      <span *ngIf="form.get('userLinkName').errors['uncorrectLink']" >ankap link e</span>
+    </p>
+  </div>
+</form>
+
+<button
+  class="btn btn-primary"
+  (click)="addUser()"
+  [disabled]="form.invalid"
+>Add user</button>
+
+<hr>
+
+<button class="btn btn-primary sortbtn" (click)="sorting()">sort</button>
+
+<app-user *ngFor="let user of users; let ind = index"
+          [userItem]="user"
+          [users]="users"
+          ></app-user>

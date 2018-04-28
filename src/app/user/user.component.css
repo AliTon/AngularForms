@@ -1,0 +1,35 @@
+.deleteBtn {
+  background-color: orangered;
+  position: relative;
+  left: 211px;
+  top: -62px;
+  border-radius: 38px;
+}
+
+.mycomp {
+  background-color: #3a4337;
+  border: 2px solid;
+  border-radius: 43px;
+  height: 126px;
+  width: 500px;
+}
+
+.data {
+  text-align: inherit;
+  margin-left: 32px;
+  color: aliceblue;}
+
+.count {
+  text-align: center;
+  font-size: x-large;
+  position: relative;
+  right: 150px;
+  color: aliceblue;
+  margin-top: 22px;
+}
+
+.jj{
+  position: relative;
+  left: 360px;
+  bottom: 73px;
+}

@@ -1,0 +1,13 @@
+<div class="mycomp">
+<div class="data">
+  <i>UserName</i> <a [href]="userItem.link" target="_blank">{{userItem.name}}</a>
+</div>
+<div>
+  <div class="count">
+  <button class="btn btn-primary"  (click)="plus()" >+</button>
+  <button class="btn btn-primary"  (click)="minus()">-</button>
+  <p>{{count}}</p>
+  </div>
+</div>
+  <button class="btn btn-primary jj" (click)="deleteComp()">DELETE</button>
+</div>
